@@ -1,29 +1,28 @@
 import java.util.*;
 
-class Calculator
+class Calculator 
 {
-  public double calculator(double a, double b, String op) 
+    public double calculate(double a, double b, String op) 
   {
-    switch (op)
-    {
-       case "add":
+        switch (op) 
+        {
+            case "add":
                 return a + b;
-        case "sub":
+            case "sub":
                 return a - b;
-        case "mul":
+            case "mul":
                 return a * b;
-        case "div":
-                if (b == 0) 
-                {
+            case "div":
+                if (b == 0) {
                     System.out.println("Error: Division by zero");
                     return 0;
                 }
                 return a / b;
-         default:
+            default:
                 System.out.println("Invalid operation");
                 return 0;
+        }
     }
-  }
 }
 
 public class Program1 {
@@ -35,9 +34,6 @@ public class Program1 {
         String op = sc.next();
 
         Calculator calc = new Calculator();
-        double result = calc.calculate(a, b, op);
-
-        System.out.println(result);
+        System.out.println(calc.calculate(a, b, op));
     }
 }
-
